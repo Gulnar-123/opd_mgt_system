@@ -65,4 +65,10 @@ PatientRepository patientRepo;
 		return patientRepo.findAll();
 	}
 
+	@Override
+	public Patient login(String em, String ps) {
+		// TODO Auto-generated method stub
+		return patientRepo.findByEmailAndPassword(em, ps);
+	}
+
 }

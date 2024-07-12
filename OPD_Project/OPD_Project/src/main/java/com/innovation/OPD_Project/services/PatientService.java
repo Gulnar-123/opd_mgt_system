@@ -10,4 +10,5 @@ void delete(long pid);
 Patient update(long pid,Patient p);
 Patient search(long pid);
 List<Patient> getAll();
+Patient login(String em,String ps);
 }
