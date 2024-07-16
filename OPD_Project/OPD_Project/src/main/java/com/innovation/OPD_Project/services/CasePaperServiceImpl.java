@@ -35,6 +35,7 @@ public class CasePaperServiceImpl implements CasePaperService {
 		{
 			CasePaper cpp=opt.get();
 			cpp.setPid(cp.getPid());
+			cpp.setAid(cp.getAid());
 			cpp.setDt(cp.getDt());
 			cpp.setComplain(cp.getComplain());
 			cpp.setBp(cp.getBp());

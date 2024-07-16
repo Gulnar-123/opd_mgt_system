@@ -55,4 +55,11 @@ PrescriptionRepository presRepo;
 		return presRepo.findAll();
 	}
 
+
+	@Override
+	public List<Prescription> getAllByApp(long aid) {
+		// TODO Auto-generated method stub
+		return presRepo.findAllByAid(aid);
+	}
+
 }

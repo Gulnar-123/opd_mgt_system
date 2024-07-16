@@ -18,6 +18,7 @@ submitdata() {
    {
     alert("Login Successful")
     localStorage.setItem("pemail",this.p.email)
+    localStorage.setItem("pid",data.pid)
     this.router.navigate(["/"])
    }
    else

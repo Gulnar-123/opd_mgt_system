@@ -13,6 +13,9 @@ import { Router } from '@angular/router';
 })
 export class AppointmentComponent {
 submitdata() {
+  this.a.status="Not Approved"
+  this.a.pid=localStorage.getItem("pid")
+
   this.as.insert(this.a).subscribe((data:Appointment)=>{
     if(data!=null)
       alert("Appointment booked Successful")

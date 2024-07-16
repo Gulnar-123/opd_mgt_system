@@ -10,6 +10,10 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit{
+logout() {
+localStorage.removeItem("pemail")
+this.router.navigate(["/"])
+}
 ngOnInit(): void {
   this.router.events.subscribe(()=>{
     let em=localStorage.getItem("pemail")
@@ -17,8 +21,22 @@ ngOnInit(): void {
     {
 this.usertype="user"
     }
-    else
-    this.usertype="guest"
+    else 
+    {
+      let am=localStorage.getItem("aemail")
+      if(am!=null)
+      {
+  this.usertype="admin"
+      }
+      else
+      {
+        this.usertype="guest"
+      }
+     
+
+      
+    }
+    
   })
 
 }
@@ -26,5 +44,10 @@ usertype="guest"
 constructor(private router:Router)
 {
 
+}
+alogout()
+{
+  localStorage.removeItem("aemail")
+  this.router.navigate(["/"])
 }
 }

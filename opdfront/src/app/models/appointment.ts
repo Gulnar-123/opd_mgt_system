@@ -1,6 +1,6 @@
 export class Appointment {
     aid:any
-    cid:any
+    pid:any
     dt:any
     tm:any
     status:any

@@ -45,6 +45,10 @@ public class PrescriptionController {
 	{
 		return ps.search(id);
 	}
-
+	@GetMapping("/Prescription/app/{id}")
+	public List<Prescription> search1(@PathVariable("id")long id)
+	{
+		return ps.getAllByApp(id);
+	}
 
 }

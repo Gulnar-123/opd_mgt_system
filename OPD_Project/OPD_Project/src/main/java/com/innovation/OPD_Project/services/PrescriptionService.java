@@ -11,5 +11,6 @@ public interface PrescriptionService {
 	Prescription update(long pid,Prescription ps);
 	Prescription search(long pid);
 	List<Prescription> getAll();
+	List<Prescription> getAllByApp(long aid);
 
 }

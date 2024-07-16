@@ -34,7 +34,7 @@ AppointmentRepository apRepo;
 		if(opt.isPresent())
 		{
 			Appointment app=opt.get();
-			app.setCid(ap.getCid());
+			app.setPid(ap.getPid());
 			app.setDt(ap.getDt());
 			app.setStatus(ap.getStatus());
 			app.setTm(ap.getTm());
